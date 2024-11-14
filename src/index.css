@@ -5,3 +5,6 @@
 body {
   font-family: "Poppins", serif;
 }
+a.active {
+  background-color: #2b3440;
+}

@@ -1,4 +1,6 @@
 import { AiFillStar, AiOutlineEye, AiOutlineShareAlt } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import News from "./News";
 
 const EveryNews = (props = {}) => {
   const { singleNews } = props || {};
@@ -40,7 +42,9 @@ const EveryNews = (props = {}) => {
         {/* Details */}
         <p className="text-gray-600 text-sm mb-4">
           {singleNews.details.slice(0, 150)}...{" "}
-          <span className="text-blue-500">Read More</span>
+          <Link to={`/news/${singleNews._id}`} className="text-blue-500">
+            Read More
+          </Link>
         </p>
         <div className="border mt-2 mb-4"></div>
 

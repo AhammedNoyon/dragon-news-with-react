@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import SocialLogin from "../components/SocialLogin";
 
 const Login = () => {
   //context
@@ -49,7 +50,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-[180px]">
+    <div className="flex justify-center items-center mt-10">
       <div className="card w-full max-w-xl shrink-0 shadow-2xl">
         <form onSubmit={handleSignInSubmit} className="card-body">
           <h3 className="text-2xl font-bold text-center my-10">
@@ -102,12 +103,13 @@ const Login = () => {
               Register
             </Link>
           </p>
-          <div>
+          <div className="mb-4">
             {err && <p className="text-red-700 text-xl font-medium">{err}</p>}
             {successfully && (
               <p className="text-success text-xl font-medium">{successfully}</p>
             )}
           </div>
+          <SocialLogin></SocialLogin>
         </form>
       </div>
     </div>

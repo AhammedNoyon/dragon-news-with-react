@@ -3,11 +3,11 @@ import { AiFillStar, AiOutlineEye, AiOutlineShareAlt } from "react-icons/ai";
 const EveryNews = (props = {}) => {
   const { singleNews } = props || {};
 
-  console.log(singleNews);
+  // console.log(singleNews);
   return (
-    <div className="card w-full bg-white shadow-lg rounded-lg p-4">
+    <div className="card w-full bg-white shadow-lg rounded-lg border border-gray-200  p-4">
       {/* Author Section */}
-      <div className="border border-gray-200  pb-2 rounded-xl">
+      <div className=" pb-2 rounded-xl">
         <div className="flex justify-between items-center mb-4 bg-gray-200">
           <div className="flex items-center px-2">
             <img

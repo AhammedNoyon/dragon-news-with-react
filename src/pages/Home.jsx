@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import CategoryTabs from "../components/CategoryTabs";
+import RightBar from "../components/RightBar";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <h3 className="text-xl mb-4 font-semibold text-[#403F3F]">
           Login With
         </h3>
+        <RightBar></RightBar>
       </div>
     </section>
   );

@@ -4,6 +4,9 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Career from "../pages/Career";
 import News from "../components/News";
+import AuthLayout from "../layout/AuthLayout";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +39,21 @@ const router = createBrowserRouter([
       {
         path: "career",
         element: <Career></Career>,
+      },
+    ],
+  },
+  {
+    path: "auth",
+    element: <AuthLayout></AuthLayout>,
+    errorElement: <h3>Not Found</h3>,
+    children: [
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
       },
     ],
   },
